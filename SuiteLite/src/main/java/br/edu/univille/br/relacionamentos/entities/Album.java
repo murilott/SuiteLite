@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Entity
+// @Table(name = "album")
 public class Album extends Lista{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
