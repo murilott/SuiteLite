@@ -1,1 +1,3 @@
-INSERT INTO Album
+-- CREATE DATABASE dbsuite;
+
+-- INSERT INTO Album

@@ -11,16 +11,14 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Entity
+
 public class Ouvinte extends Pessoa{
-    // @Column(nullable = false)
-    // @OneToOne
-    // private Perfil perfil;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
-    @OneToMany
-    @JoinColumn(name = "ouvinte_id")
+    @OneToOne
+    @JoinColumn(name = "curtidos_id")
     private Playlist curtidos;
 
     @OneToMany

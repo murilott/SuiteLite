@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Entity
+
 public class Artista extends Pessoa{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

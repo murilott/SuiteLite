@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
+
 public class Musica {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,13 +15,10 @@ public class Musica {
 
     private String nome;
 
-    @Column(nullable = false)
     @ManyToOne
+    @JoinColumn(name = "album_id")
     private Album album;
     private int duracao;
     private long reproducoes;
     private boolean explicito;
-
-    @OneToOne
-    private Genero genero;
 }

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
+
 public class Lista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +18,8 @@ public class Lista {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
     @ManyToOne
+    @JoinColumn(name = "criador_id")
     private Pessoa criador;
     
     @OneToMany
